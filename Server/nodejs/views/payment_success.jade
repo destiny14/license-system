@@ -1,0 +1,9 @@
+extends layout
+
+block content
+	div.container
+		h1 Programm XYZ - Lizenz erwerben
+		h2 Zahlung abgeschlossen
+		p Das Programm wird lizensiert für: #{surname} #{name}
+		form(method='POST', action='createLicense')
+			button(type='submit').btn.btn-primary Lizenz anfordern

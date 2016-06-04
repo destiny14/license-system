@@ -1,0 +1,25 @@
+extends layout
+
+block content
+	div.container
+		h1 Programm XYZ - Lizenz erwerben
+		p Bitte die folgenden Felder ausfüllen um die Bestellung abzuschließen.
+		form(method='POST', action='processPayment').form-horizontal
+			div.form-group
+				label(for='inputSurname').col-sm-2.control-label Vorname
+				div.col-sm-10
+					input(type='text', id='inputSurname', name='inputSurname', placeholder='Erika').form-control
+			div.form-group
+				label(for='inputName').col-sm-2.control-label Nachname
+				div.col-sm-10
+					input(type='text', id='inputName', name='inputName', placeholder='Mustermann').form-control
+			div.form-group
+				label(for='selectFeatureLevel').col-sm-2.control-label Lizenztyp
+				div.col-sm-10
+					select(id='selectFeatureLevel', name='selectFeatureLevel').form-control
+						option(value='1') Single User
+						option(value='2', selected) Commercial
+						option(value='3') Open Source
+			div.form-group
+				div.col-sm-offset-2.col-sm-10
+					button(type='submit').btn.btn-primary Bestellen

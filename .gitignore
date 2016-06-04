@@ -100,3 +100,4 @@ Thumbs.db
 dist/*.nupkg
 
 *.user
+Server/nodejs/node_modules/
